@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="img/png" href="static/logo.png" />
+    <title>Yasmine's Font</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px;
+        background: radial-gradient(
+          circle,
+          rgb(247, 170, 184),
+          rgb(228, 132, 147)
+        );
+      }
+      main {
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      main button {
+        font-weight: bold;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        background-color: rgb(188, 104, 204);
+        border: none;
+        padding: 20px 50px;
+        border-radius: 10px;
+        animation: slide 1s ease-in;
+      }
+      main button:hover {
+        border: solid rgb(188, 104, 204) 2px;
+      }
+      .img img {
+        animation: slide 1s ease-in;
+
+        width: 300px;
+      }
+      @keyframes slide {
+        0% {
+          transform: scale(0);
+        }
+      }
+      footer {
+        margin-top: 100px;
+      }
+
+      @media (max-width: 576px) {
+        footer {
+          margin-top: 50%;
+        }
+      }
+      .forscript {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="start" class="forscript">
+      <main>
+        <div class="img">
+          <img src="static/logo.png" />
+        </div>
+        <button onclick="direct()">Get started</button>
+      </main>
+ 
+      </button>
+    </div>
+    <script>
+      const start = document.getElementById("start");
+
+      function direct() {
+        start.textContent = "";
+        if (start.textContent === "") {
+          start.classList.add("forscript");
+          start.textContent = "loading...";
+          start.style.fontSize = "x-large";
+          start.style.paddingTop = "300px";
+          start.style.color = "white";
+          start.style.fontWeight = "bold";
+
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1500);
+        }
+      }
+    </script>
+  </body>
+</html>
